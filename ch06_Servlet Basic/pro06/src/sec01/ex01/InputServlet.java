@@ -7,7 +7,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+// 사용자로부터 입력을 받아 로직을 처리하는 간단한 수강 신청 프로그램
 @WebServlet("/input")
 public class InputServlet extends HttpServlet {
 	public void init() throws ServletException {

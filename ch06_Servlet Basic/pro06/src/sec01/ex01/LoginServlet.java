@@ -7,7 +7,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+// 서블릿을 사용해 로그인을 요청하는 처리를 구현
 	@WebServlet("/login")
 	public class LoginServlet extends HttpServlet {
 		public void init() throws ServletException {
