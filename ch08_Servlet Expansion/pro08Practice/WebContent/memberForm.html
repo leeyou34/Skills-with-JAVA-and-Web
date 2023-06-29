@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>회원 가입창</title>
+<script type="text/javascript">
+	function fn_sendMember() {
+		var frmMember = document.frmMember;
+		var id = frmMember.id.value;
+		var pwd = frmMember.pwd.value;
+		var name = frmMember.name.value;
+		var email = frmMember.email.value;
+		
+		if (id.length == 0 || id =="") {
+			alert("아이디는 필수입니다.");
+		} else if (pwd.length == 0 || pwd =="") {
+			alert("비밀번호는 필수입니다.");
+		} else if (name.length ==0 || name=="") {
+			alert("이름은 필수입니다.";)
+		} else if (email.length ==- || email=="") {
+			alert("이메일은 필수입니다.");
+		} else {
+			frmMember.method ="post"; <!-- 전송 방법을 post로 지정합니다.-->
+			frmMember.action ="member3"; <!-- 서블릿 매핑 이름을 member3으로 지정한다.-->
+			frmMember.submit(); <!-- 서블릿으로 전송한다.-->
+		}
+	}
+</script>
+</head>
+<body>
+	<form name="frmMember">
+		<table>
+			<th>회원 가입창</th>
+			<tr>
+				<td>아이디</td>
+				<td><input type="text" name="id"></td> <!-- 입력한 ID를 서블릿으로 전송한다. -->
+			</tr>
+			<tr>
+				<td>비밀번호</td>
+				<td><input type="password" name="pwd"></td> <!-- 입력한 비밀번호를 서블릿으로 전송한다. -->
+			</tr>
+			<tr>
+				<td>이름</td>
+				<td><input type="text" name="name"></td> <!-- 입력한 이름을 서블릿으로 전송한다. -->
+			</tr>
+			<tr>
+				<td>이메일</td>
+				<td><input type="text" name="email"></td> <!-- 입력한 이메일을 서블릿으로 전송한다. -->
+			</tr>
+		</table>
+		<input type="button" value="가입하기" onclick="fn_sendMember()">
+		<input type="reset" value="다시 입력">
+		<input type="hidden" name="command" value="addMember"/> <!-- hidden 태그를 이용해 서블릿에게 회원 등록임을 알린다. -->
+	</form>
+</body>
+</html>
