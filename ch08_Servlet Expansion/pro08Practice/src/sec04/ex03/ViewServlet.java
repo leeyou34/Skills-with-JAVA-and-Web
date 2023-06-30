@@ -11,7 +11,6 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import sec02.ex02.MemberVO;
 
 @WebServlet("/viewMembers")
 public class ViewServlet extends HttpServlet{
